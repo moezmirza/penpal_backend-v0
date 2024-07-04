@@ -12,12 +12,12 @@ await fastify.register(cors, {
 })
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDg9lIgznBwBJjEtKehcdOjHFW5c3gb2nY",
-    authDomain: "penpal-60d8f.firebaseapp.com",
-    projectId: "penpal-60d8f",
-    storageBucket: "penpal-60d8f.appspot.com",
-    messagingSenderId: "603216704327",
-    appId: "1:603216704327:web:db5a5a5557695f17d2d262"
+    apiKey: process.env.FIREBASE_APIKEY,
+    authDomain: process.env.FIREBASE_AUTHDOMAIN,
+    projectId: process.env.FIREBASE_PROJECTID,
+    storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+    appId: process.env.FIREBASE_APPID
 };
 
 export const firebaseApp = initializeApp(firebaseConfig)
