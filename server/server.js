@@ -1,10 +1,11 @@
-import {fastify} from './routes/init.js'
+import {fastify, BASE_URL} from './routes/init.js'
 
-export const BASE_URL = '/api/v1'
 
 fastify.get(BASE_URL, async () =>{
     return {message:'Welcome to Penpal API'}
 })
+
+import './routes/user.js'
 
 async function startServer(){
     try{

@@ -1,0 +1,7 @@
+json object returned from a valid api call:
+{
+    data:{} //can be null
+    event_code : number, //1 for success, 0 for failure
+    message: 'string', //could be error message
+    status_code: number, //200 for success, 500 for failure
+}
